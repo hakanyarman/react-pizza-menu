@@ -1,5 +1,3 @@
-import Pizza from "./Pizza";
-
 const pizzaData = [
   {
     name: "Focaccia",
@@ -44,23 +42,3 @@ const pizzaData = [
     soldOut: false,
   },
 ];
-
-function App() {
-
-  const components = [];
-  const componentCount = pizzaData.length;
-
-  for (let i = 0; i < componentCount; i++) {
-    components.push(<div key={i}><Pizza name={pizzaData[i].name} ingredients={pizzaData[i].ingredients} price={pizzaData[i].price} photoName={pizzaData[i].photoName} soldOut={pizzaData[i].soldOut} /></div>);
-  }
-
-  return (
-    <div className="App">
-      {/* <Pizza name={pizzaData[0].name} ingredients={pizzaData[0].ingredients} price={pizzaData[0].price} photoName={pizzaData[0].photoName} soldOut={pizzaData[0].soldOut} /> */}
-      <h1 style={{ textAlign: "center", backgroundColor: "#D4E2D4" }}>Pizza Menu</h1>
-      {components}
-    </div >
-  );
-}
-
-export default App;
