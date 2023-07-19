@@ -50,6 +50,9 @@ const pizzaData = [
   },
 ];
 
+const numOfPizzas = pizzaData.length;
+const isPizzaDataNull = numOfPizzas === 0 ? true : false;
+
 function App() {
 
   // const components = [];
@@ -66,11 +69,15 @@ function App() {
       {/* {components} */}
 
       {/* RENDERING LIST WITH MAP METHOD */}
-      <ul>
-        {pizzaData.map(pizza =>
-          <Pizza key={pizza.name} name={pizza.name} ingredients={pizza.ingredients} price={pizza.price} photoName={pizza.photoName} soldOut={pizza.soldOut}></Pizza>)
-        }
-      </ul>
+
+      {!isPizzaDataNull && (
+        <ul>
+          {pizzaData.map(pizza =>
+            <Pizza key={pizza.name} name={pizza.name} ingredients={pizza.ingredients} price={pizza.price} photoName={pizza.photoName} soldOut={pizza.soldOut}></Pizza>
+          )}
+        </ul>
+      )}
+
       <Footer></Footer>
     </div >
   );

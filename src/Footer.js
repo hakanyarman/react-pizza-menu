@@ -11,6 +11,7 @@ function Footer() {
             <h2 style={{ textAlign: "center", backgroundColor: "#D4E2D4" }}>
                 {/* {new Date().getHours() > 22 || new Date().getHours() < 10 ? <i>We are not currently open</i> : <i>We are currently open</i>} */}
                 {!isOpen ? <i>We are <span>NOT</span> currently open</i> : <i>We are currently open.</i>}
+                {/* {isOpen && <i>We are currently open</i>} */}
             </h2>
         </div>
     )
