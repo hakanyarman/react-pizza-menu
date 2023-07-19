@@ -13,11 +13,14 @@ function Pizza(props) {
                 <p>Price: {props.price}</p>
                 <img src={props.photoName} alt='pizzaimage' style={{ width: 200, height: 200 }}></img>
                 <p>Sold Out: {props.soldOut.toString()}</p>
-                <button className='add-to-cart-button'>Add To Cart</button>
+                {props.soldOut === false ? (
+                    <button className='add-to-cart-button'>Add To Cart</button>
+                ) : <button className='disabled-button' disabled={true}><del>Add To Cart</del></button>}
+
             </div>
 
 
-        </div>
+        </div >
     )
 }
 

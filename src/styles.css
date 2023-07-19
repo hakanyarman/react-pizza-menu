@@ -30,3 +30,13 @@
 .footer-container span {
   color: red;
 }
+
+.disabled-button {
+  border: 1.6px solid black;
+  border-radius: 12%;
+  background-color: rgb(10, 10, 10);
+  color: white;
+  width: 100px;
+  height: 25px;
+  font-size: 1rem;
+}
