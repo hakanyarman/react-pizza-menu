@@ -1,0 +1,32 @@
+.pizza-container {
+  margin-bottom: 20px;
+  border-bottom: 5px solid aqua;
+  background-color: #f4f4f0;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.inner-container {
+  width: fit-content;
+  margin: auto;
+  background-color: rgb(188, 243, 243);
+}
+
+.add-to-cart-button {
+  border: 1.6px solid black;
+  border-radius: 12%;
+  background-color: lightcoral;
+  color: white;
+  width: 100px;
+  height: 25px;
+  font-size: 1rem;
+}
+.add-to-cart-button:hover {
+  background-color: #0b7c4b;
+  height: 30px;
+  width: 110px;
+}
+
+.footer-container span {
+  color: red;
+}
