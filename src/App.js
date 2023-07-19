@@ -1,6 +1,9 @@
 import Pizza from "./Pizza";
 import Header from "./Header";
 import Footer from "./Footer";
+import './index.css';
+
+
 
 const pizzaData = [
   {
@@ -49,18 +52,25 @@ const pizzaData = [
 
 function App() {
 
-  const components = [];
-  const componentCount = pizzaData.length;
+  // const components = [];
+  // const componentCount = pizzaData.length;
 
-  for (let i = 0; i < componentCount; i++) {
-    components.push(<div key={i}><Pizza name={pizzaData[i].name} ingredients={pizzaData[i].ingredients} price={pizzaData[i].price + "$"} photoName={pizzaData[i].photoName} soldOut={pizzaData[i].soldOut} /></div>);
-  }
+  // for (let i = 0; i < componentCount; i++) {
+  //   components.push(<div key={i}><Pizza name={pizzaData[i].name} ingredients={pizzaData[i].ingredients} price={pizzaData[i].price} photoName={pizzaData[i].photoName} soldOut={pizzaData[i].soldOut} /></div>);
+  // }
 
   return (
     <div className="App">
       {/* <Pizza name={pizzaData[0].name} ingredients={pizzaData[0].ingredients} price={pizzaData[0].price} photoName={pizzaData[0].photoName} soldOut={pizzaData[0].soldOut} /> */}
       <Header></Header>
-      {components}
+      {/* {components} */}
+
+      {/* RENDERING LIST WITH MAP METHOD */}
+      <ul>
+        {pizzaData.map(pizza =>
+          <Pizza key={pizza.name} name={pizza.name} ingredients={pizza.ingredients} price={pizza.price} photoName={pizza.photoName} soldOut={pizza.soldOut}></Pizza>)
+        }
+      </ul>
       <Footer></Footer>
     </div >
   );
