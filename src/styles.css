@@ -44,3 +44,7 @@
 .fade {
   filter: opacity(0.4);
 }
+
+.pizza-image {
+  border-radius: 10%;
+}

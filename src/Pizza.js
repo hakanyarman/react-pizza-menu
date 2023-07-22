@@ -12,7 +12,7 @@ function Pizza(props) {
                 <p>Ingredients: {props.ingredients}</p>
                 <p> {props.soldOut === false ? "Price :" + props.price + "$" : null}</p>
                 <img src={props.photoName} alt='pizzaimage' style={{ width: 200, height: 200 }}
-                    className={props.soldOut === true ? 'fade' : 'normal'}></img>
+                    className={`pizza-image ${props.soldOut === true ? 'fade' : ""} `}></img>
                 <p>Sold Out: {props.soldOut.toString()}</p>
                 {props.soldOut === false ? (
                     <button className='add-to-cart-button'>Add To Cart</button>
